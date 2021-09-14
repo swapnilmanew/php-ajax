@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <title>Interview Question</title>
+    <title>Interview TASK</title>
   </head>
   <body>
 
@@ -44,7 +44,7 @@
   
   <script>
     $(document).ready(function(){
-      // displayData();
+      displayData();
     })
    
     //  inserting data into the database
@@ -63,8 +63,8 @@
       })
 
        //  fetching and displaying data from the database
-       const records = "records";
-      function displayData()
+       var records = "records";
+      function displayData(e)
     { 
         $.ajax({
           url:"backend.php",
@@ -75,9 +75,8 @@
             $(".showData").html(data);
           }
         })
+      e.preventDefault();
     }
-
-
     
   </script>
 
