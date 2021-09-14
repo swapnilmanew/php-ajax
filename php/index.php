@@ -43,23 +43,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
   <script>
-
- 
-    //  fetching and displaying data from the database
-      const records = "records";
-      function displayData()
-    { 
-        $.ajax({
-          url:"backend.php",
-          type:"POST",
-          data:{records:records},
-          success:function(data, status)
-          {
-            $(".showData").html(data);
-          }
-        })
-    }
-
+    $(document).ready(function(){
+      // displayData();
+    })
+   
     //  inserting data into the database
       $("#form").on("submit", function(event){
         event.preventDefault();
@@ -74,6 +61,22 @@
           }
         })
       })
+
+       //  fetching and displaying data from the database
+       const records = "records";
+      function displayData()
+    { 
+        $.ajax({
+          url:"backend.php",
+          type:"POST",
+          data:{records:records},
+          success:function(data, status)
+          {
+            $(".showData").html(data);
+          }
+        })
+    }
+
 
     
   </script>

@@ -21,7 +21,7 @@
         //fetching data from the database
         if(isset($_POST['records']))
             {
-                $display_query = "SELECT * FROM data order by id desc LIMIT 1";
+                $display_query = "SELECT * FROM data ORDER BY id DESC LIMIT 1";
                 $display_fire = mysqli_query($con,$display_query);
                 $result = mysqli_fetch_assoc($display_fire);
                 echo "
